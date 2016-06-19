@@ -1,0 +1,124 @@
+.blocks {
+	margin-top: 32px;
+	text-align: center;
+
+	@include respond(tablets) { 
+		margin-top: 96px;
+	}
+
+	.blocks__title {
+		margin-bottom: 14px;
+		color: $color1;
+		font: 22px $montsBold;
+
+		@include respond(tablets) { 
+			margin-bottom: 34px;
+		}
+	}
+
+	.grid-sizer {
+		width: 100%;
+		@include respond(tablets) { width: 32%; }
+	}
+
+	.grid-item {
+		float: left;
+		position: relative;
+		width: 100%;
+		height: 121px; 
+		margin-bottom: 10px;
+		border-radius: 3px;
+		overflow: hidden;
+
+		img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			transition: transform 0.3s linear;
+		}
+
+		&:hover img {
+			transform: scale(1.2);
+		}
+
+		h2 {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 70%;
+			transform: translate(-50%, -50%);
+			color: $color4;
+			font: 22px $montsBold;
+			text-align: center;
+			text-transform: capitalize;
+		}
+
+		@include respond(tablets) {
+			width: 32%;
+			height: 310px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.gutter-sizer {
+		width: 0;
+
+		@include respond(tablets) { width: 2%; }
+	}
+
+	.grid-item--width2 { 
+		width: 100%;
+
+		@include respond(tablets) { width: 66%; }
+	}
+
+	.blocks__title--bottom {
+		margin: 17px 0 8px;
+
+		@include respond(tablets) { 
+			margin: 74px 0 29px;
+		}
+	}
+
+	.blocks__question {
+		color: $color1;
+		font: 18px $robotoLight;
+
+		@include respond(tablets) { margin-bottom: 21px; }
+	}
+
+	#query {
+		height: 40px;
+		width: 280px;
+		border: 1px solid $color6;
+		margin: 16px 0 10px;
+		padding-left: 15px;
+		border-radius: 3px;
+		color: $color5;
+		font: 14px $robotoLight;
+
+		@include respond(tablets) {
+			width: 240px;
+			margin-right: 10px;
+		}
+	}
+
+	#go {
+		height: 40px;
+		width: 280px;
+		border: 0;
+		background: $color3;
+		border-radius: 40px;
+		color: $color4;
+		font: 14px $montsBold;
+		outline: none;
+
+		@include respond(tablets) { width: 160px; }
+
+		&:hover {
+			cursor: pointer;
+			background: #fe7475;
+		}
+	}
+
+}

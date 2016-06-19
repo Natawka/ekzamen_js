@@ -1,0 +1,182 @@
+.sliders {
+	@include respond(tablets) {
+		margin-top: 61px;
+	};
+
+	h2 {
+		margin-bottom: 14px;
+		margin-top: 33px;
+		color: #333333;
+		font: 22px $montsBold;
+		letter-spacing: 1px;
+		text-align: center;
+
+		@include respond(tablets) {
+			margin-bottom: 34px;
+		};
+	}
+
+	.slide {
+		position: relative;
+		height: 240px;
+		width: 300px;
+		margin: 0 auto 10px;
+		border-radius: 7px;
+
+		@include respond(tablets) {
+			float: left;
+			height: 400px;
+			width: 236px;
+			margin: 0 18px 10px 1px;
+		};
+
+		&:last-child {
+			@include respond(tablets) {
+				margin-right: 0;
+			};
+		}
+
+		@include respond(desktop) {
+			width: 300px;
+			margin: 0 18px 10px 1px;
+		};
+
+		.slide__carousel {
+			position: relative;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+
+			.carousel {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 1500px;
+				list-style-type: none;
+
+				li {
+					float: left;
+					height: 240px;
+					width: 300px;
+
+					@include respond(tablets) {
+						height: 400px;
+						width: 236px;
+					};
+
+					@include respond(desktop) {
+						width: 300px;
+					};
+
+					img {
+						height: 100%;
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.slide__content {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+
+			.left-arrow, .right-arrow {
+				display: none;
+				height: 57px;
+				width: 34px;
+
+				@include respond(tablets) {
+					display: block;
+					margin-top: 39px;
+				};
+
+				@include respond(desktop) {
+					margin-top: 152px;
+				};
+			}
+
+			.left-arrow {
+				float: left;
+				background: url($imgDir + 'left.png');
+
+				@include respond(tablets) {
+					margin-left: 19px;
+				};
+			}
+
+			.right-arrow {
+				float: right;
+				background: url($imgDir + 'right.png');
+
+				@include respond(tablets) {
+					margin-right: 18px;
+				};
+			}
+
+			.link__step {
+				display: inline-block;
+				margin-left: 21px;
+				margin-top: 68px;
+				padding: 5px 11px;
+				background: #ff4e50;
+				color: white;
+				font: 10px $montsBold;
+				letter-spacing: 4px;
+				text-decoration: none;
+				text-transform: uppercase;
+				border-radius:20px;
+
+				&:hover {
+					background: #d04068;
+					opacity: 0.8;
+				}
+
+				@include respond(tablets) {
+					margin-top: 211px;
+					margin-left: -33px;
+				};
+
+				@include respond(tablets) {
+					margin-top: 228px;
+				};
+			}
+
+			p {
+				margin-left: 21px;
+			}
+
+			.slide__title {
+				margin-bottom: 8px;
+				margin-top: 14px;
+				color: white;
+				font: 24px $montsBold;
+			}
+
+			.slide__text {
+				padding-bottom: 20px;
+				color: white;
+				font:14px $robotoLight;
+				opacity: 0.8;
+
+				@include respond(tablets) {
+					font-size: 12px;
+				};
+			}
+		}
+	}
+
+	.slide--second {
+		.slide__content {
+			.link__step {
+				margin-top: 98px;
+				padding: 5px 9px;
+
+				@include respond(tablets) {
+					margin-top: 258px;
+				};
+			}
+		}
+	}
+}

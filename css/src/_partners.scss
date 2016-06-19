@@ -1,0 +1,144 @@
+.partners {
+	margin-top: 23px;
+	color: $color1;
+	font-family: $montsBold;
+	text-align: center;
+
+	@include respond(tablets) { 
+		margin-top: 86px;
+	}
+
+	.partners__title {
+		margin-bottom: 13px;
+		font-size: 22px;
+
+		@include respond(tablets) { 
+			margin-bottom: 31px;
+		}
+	}
+
+	.partners__partner {
+		width: 220px;
+		margin: 0 auto;
+
+		@include respond(tablets) { 
+			float: left;
+			margin-right: 37px;
+		}
+
+		@include respond(desktop) { margin: 0 2px 0 13px; }
+
+		.partners__partner__photo {
+			position: relative;
+			height: 122px;
+			width: 122px;
+			margin: 0 auto;
+			border-radius: 50%;
+
+			img {
+				border-radius: 50%;
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 85px;
+				left: 85px;
+				height: 32px;
+				width: 32px;
+				border: 4px solid $color4;
+				background: $color3 url(../../img/sprite.png) 7px 6px no-repeat;
+				border-radius: 50%;
+			}
+		}
+
+		.partners__partner__photo--2:after {
+		 	background-color: $color7;
+		 	background-position: -18px 6px;
+		 }
+
+		.partners__partner__photo--3:after {
+		 	background-color: $color8;
+		 	background-position: -45px 6px;
+		 }
+
+		.partners__partner__photo--4:after {
+		 	background-color: $color9;
+		 	background-position: -76px 6px;
+		 }
+
+		.partners__partner__name {
+			margin: 18px 0 10px;
+			font-size: 14px;
+		}
+
+		.partners__partner__description {
+			margin-bottom: 23px;
+			color: $color2;
+			font: 14px $robotoLight;
+		}
+	}
+
+	.partners__partner1,
+	.partners__partner3 {
+		@include respond(tablets) {
+			margin-left: 138px;
+		}
+
+		@include respond(desktop) {
+			margin-left: 2px;
+		}
+	}
+
+	.partners__partner1 {
+		@include respond(desktop) {
+			margin-right: 5px;
+		}
+	}
+
+	.partners__partner2 {
+		@include respond(desktop) {
+			margin-right: 16px;
+		}
+	}
+
+	.partners__partner3 {
+		@include respond(desktop) {
+			margin-right: 5px;
+		}
+	}
+
+	.partners__partner4 {
+		@include respond(desktop) {
+			margin-left: 12px;
+		}
+	}
+
+	.partners__button {
+		display: block;
+		height: 40px;
+		width: 280px;
+		border: 2px solid $color3;
+		margin: 0 auto;
+		background: $color4;
+		color: $color3;
+		font: 14px $montsBold;
+		border-radius: 40px;
+
+		&:hover {
+			background: $color3;
+			color: $color4;
+			cursor: pointer;
+		}
+
+		@include respond(tablets) { 
+			width: 192px;
+			margin-top: 37px;
+		}
+
+		@include respond(desktop) { 
+			margin-top: 6px;
+		}
+	}
+}

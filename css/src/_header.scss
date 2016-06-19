@@ -1,0 +1,119 @@
+header {
+	width: 320px;
+	margin: 0 auto;	
+	background: url($imgDir + 'header_m.jpg') 50% 0 no-repeat;
+	color: white;
+
+	@include respond(tablets) {
+		width: 768px;
+		background: url($imgDir + 'header.jpg') 50% 0 no-repeat;
+	};
+
+	@include respond(desktop) {
+		width: 100%;
+	};
+
+	.content {
+		height: 541px;
+		text-align: center;
+
+		@include respond(tablets) {
+			height: 700px;
+		};
+
+		.login {
+			padding-left: 57px;
+			overflow: hidden;
+
+			@include respond(tablets) {
+				float: right;
+				margin: 17px 42px 0 0;
+			};
+
+			@include respond(desktop) {
+				margin-right: 4px;
+			};
+
+			a {
+				display: inline-block;
+				float: left;
+				border: 2px solid transparent;
+				margin-top: 21px;
+				padding: 8px 14px;
+				border-radius: 20px;
+				color: white;
+				font: 14px $montsBold;
+				text-decoration: none;
+
+				&:hover {
+					border-color: white;
+				}
+
+				&:last-child {
+					margin-left: 5px;
+				}
+			}				
+		}
+
+		.title {
+			margin-top: 113px;
+			font: 20px $montsBold;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+
+			@include respond(tablets) {
+				margin: 46px 0 0 38px;
+				text-align: left;
+			};
+
+			@include respond(desktop) {
+				margin-left: 0;
+			};
+		}
+
+		h1 {
+			margin-top: 28px;
+			font: 30px $montsBold;
+			text-transform: uppercase;
+
+			@include respond(tablets) {
+				margin-top: 145px;
+				font-size: 52px;
+			};
+		}
+
+		.description {
+			width: 220px;
+			margin: 5px auto 0;
+			font: 18px $robotoLight;
+			opacity: 0.8;
+
+			@include respond(tablets) {
+				width: 100%;
+				margin-top: 21px;
+				font-size: 24px;
+			};
+		}
+
+		.link {
+			display: block;
+			margin: 14px 10px 0;
+			padding: 12px 0;
+			background: #ff4e50;
+			border-radius: 20px;
+			color: white;
+			font: 14px $montsBold;
+			text-decoration: none;
+
+			&:hover {
+				background: #d04068;
+				opacity: 0.8;
+			}
+
+			@include respond(tablets) {
+				width: 224px;
+				margin: 32px auto 0;
+			};
+		}
+	}
+}

@@ -1,0 +1,142 @@
+footer {
+	width: 320px;
+	border-top: 4px solid #ff4e50;
+	margin: 40px auto 0;
+
+	@include respond(tablets) {
+		width: 768px;
+		margin-top: 90px;
+	}
+
+	@include respond(desktop) { 
+		width: 100%;
+		margin-top: 92px;
+	}
+
+	.content {
+		text-align: center;
+
+		@include respond(tablets) {
+			text-align: left;
+		}
+
+		.subject {
+			margin-top: 17px;
+			color: #ff4e50;
+			font: 16px $montsBold;
+			text-transform: uppercase;
+
+			@include respond(tablets) {
+				float: left;
+				margin: 36px 0 0 31px;
+				font-size: 17px;
+				text-align: left;
+			}
+
+			@include respond(desktop) {
+				margin-left: 0;
+			}
+		}
+
+		.company {
+			@include respond(tablets) {
+    			float: left;
+				margin: 23px 0 0 83px;
+			}
+
+			@include respond(desktop) {
+				margin-left: 97px;
+			}
+
+			.name {
+				margin-top: 14px;
+				color: #333333;
+				font: 14px $montsBold;
+
+				&.partn {
+
+				}
+
+				@include respond(tablets) {
+	    			margin-bottom: 11px;
+				}
+			}
+
+			.menu {
+				margin: 0 auto;
+				padding-left: 50px;
+				overflow: hidden;
+
+				@include respond(tablets) {
+					padding-left: 0;
+				}
+
+				li {
+					float: left; 
+					padding-right: 15px;
+					list-style-type: none;
+
+					&:last-child {
+						padding-right: 0;
+					}
+
+					@include respond(tablets) {
+						float: none;
+						margin-bottom: 5px;
+					}
+				}
+					
+				a {
+					display: block;
+					color: #666666;
+					font: 14px $robotoLight;
+					text-decoration: none;
+
+					&:hover {
+						opacity: 0.8;
+					}
+				}
+			}
+		}
+
+		.partn {
+			margin-top: 14px;
+			color: #333333;
+			font: 14px $montsBold;
+
+			@include respond(tablets) {
+				float: left;
+    			margin: 37px 0 0 101px;
+			}
+
+			@include respond(desktop) {
+				margin-left: 90px;
+			}
+		}
+
+		.design {
+			@include respond(tablets) {
+				float: right;
+    			margin: 27px 29px 0 0;
+    			text-align: right;
+			}
+
+			@include respond(desktop) {
+				margin-right: 2px;
+			}
+
+			span {
+				display: block;
+				margin-top: 12px;
+				color: #cccccc;
+				font: 10px $montsBold;
+				text-transform: uppercase;
+			}
+
+			img {
+				display: block;
+				margin: 7px 0 18px 94px;
+			}
+		}
+	}
+}

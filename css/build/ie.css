@@ -1,0 +1,24 @@
+@media all and (min-width: 768px) {
+	.sliders .slide {
+		margin-right: 10px; 
+	}
+
+	.blocks .content .grid .gutter-sizer {
+		width: 6px;
+	}
+
+	.blocks .content .grid .grid-item--width2 {
+		width: 65%;
+	}
+}
+
+@media all and (min-width: 960px) {
+	.sliders .slide {
+		margin-right: 10px; 
+	}
+}
+
+.blocks .grid-item h2 {
+	left: 15%;
+	top: 45%;
+}
